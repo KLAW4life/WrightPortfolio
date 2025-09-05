@@ -1,12 +1,59 @@
 
-import { useState, useEffect, useRef } from 'react';
+// import { useState, useEffect, useRef } from 'react';
 
-interface PhysicsState {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-}
+// interface PhysicsState {
+//   x: number;
+//   y: number;
+//   vx: number;
+//   vy: number;
+// }
+
+// export const usePhysics = (initialX: number, initialY: number, speed: number = 0.5) => {
+//   const [position, setPosition] = useState({ x: initialX, y: initialY });
+//   const velocityRef = useRef({ 
+//     vx: (Math.random() - 0.5) * speed, 
+//     vy: (Math.random() - 0.5) * speed 
+//   });
+//   const animationRef = useRef<number>();
+
+//   useEffect(() => {
+//     const animate = () => {
+//       setPosition(prev => {
+//         const newX = prev.x + velocityRef.current.vx;
+//         const newY = prev.y + velocityRef.current.vy;
+
+//         // Bounce off edges (accounting for bubble size)
+//         if (newX <= 5 || newX >= 90) {
+//           velocityRef.current.vx *= -1;
+//         }
+//         if (newY <= 5 || newY >= 85) {
+//           velocityRef.current.vy *= -1;
+//         }
+
+//         return {
+//           x: Math.max(5, Math.min(90, newX)),
+//           y: Math.max(5, Math.min(85, newY))
+//         };
+//       });
+
+//       animationRef.current = requestAnimationFrame(animate);
+//     };
+
+//     animationRef.current = requestAnimationFrame(animate);
+
+//     return () => {
+//       if (animationRef.current) {
+//         cancelAnimationFrame(animationRef.current);
+//       }
+//     };
+//   }, []);
+
+    
+
+//   return position;
+// };
+
+import { useState, useEffect, useRef } from 'react';
 
 export const usePhysics = (initialX: number, initialY: number, speed: number = 0.5) => {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
@@ -14,20 +61,30 @@ export const usePhysics = (initialX: number, initialY: number, speed: number = 0
     vx: (Math.random() - 0.5) * speed, 
     vy: (Math.random() - 0.5) * speed 
   });
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
+  const lastTimeRef = useRef<number>(0);
 
   useEffect(() => {
-    const animate = () => {
+    const animate = (currentTime: number) => {
+      // Throttle to ~60fps
+      if (currentTime - lastTimeRef.current < 16) {
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
+      lastTimeRef.current = currentTime;
+
       setPosition(prev => {
-        const newX = prev.x + velocityRef.current.vx;
-        const newY = prev.y + velocityRef.current.vy;
+        let newX = prev.x + velocityRef.current.vx;
+        let newY = prev.y + velocityRef.current.vy;
 
         // Bounce off edges (accounting for bubble size)
         if (newX <= 5 || newX >= 90) {
           velocityRef.current.vx *= -1;
+          newX = Math.max(5, Math.min(90, newX));
         }
         if (newY <= 5 || newY >= 85) {
           velocityRef.current.vy *= -1;
+          newY = Math.max(5, Math.min(85, newY));
         }
 
         return {
@@ -39,14 +96,17 @@ export const usePhysics = (initialX: number, initialY: number, speed: number = 0
       animationRef.current = requestAnimationFrame(animate);
     };
 
+    // Start animation
     animationRef.current = requestAnimationFrame(animate);
 
+    // Cleanup function
     return () => {
-      if (animationRef.current) {
+      if (animationRef.current !== null) {
         cancelAnimationFrame(animationRef.current);
+        animationRef.current = null;
       }
     };
-  }, []);
+  }, [speed]); // Only re-run if speed changes
 
   return position;
 };
