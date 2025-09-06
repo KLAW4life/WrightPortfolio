@@ -143,19 +143,81 @@ const Index = () => {
 
   const handleBubbleClick = (path) => navigate(path);
 
+
+  // return (
+  //   <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900">
+  //     {/* Background + Title + Avatar omitted for brevity */}
+
+  //     {/* Floating project bubbles */}
+  //     {bubbles.map((bubble) => (
+  //       <FloatingBubble
+  //         key={bubble.id}
+  //         project={bubble}
+  //         resetTrigger={resetTrigger} // Pass to usePhysics inside FloatingBubble
+  //         onClick={() => handleBubbleClick(bubble.path)}
+  //       />
+  //     ))}
+  //   </div>
+  // );
+
   return (
     <div className="min-h-screen overflow-hidden relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900">
-      {/* Background + Title + Avatar omitted for brevity */}
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-pink-500 rounded-full opacity-30 animate-bounce"></div>
+        <div className="absolute bottom-32 left-40 w-28 h-28 bg-indigo-500 rounded-full opacity-25 animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-36 h-36 bg-purple-600 rounded-full opacity-15 animate-bounce"></div>
+      </div>
+
+      {/* Main title */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 ">
+        <h1 className="text-6xl md:text-7xl pb-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 animate-pulse">
+          Wright Portfolio
+        </h1>
+        <div className="text-center mt-2">
+          <p className="text-purple-200 text-lg md:text-xl font-medium">
+            ✨ Computer Science Master's Student ✨
+          </p>
+        </div>
+      </div>
+
+      {/* Central avatar */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <StudentAvatar />
+      </div>
 
       {/* Floating project bubbles */}
       {bubbles.map((bubble) => (
         <FloatingBubble
-          key={bubble.id}
+          key={`${bubble.id}-${bubble.x}-${bubble.y}`} // Force remount with new positions
           project={bubble}
-          resetTrigger={resetTrigger} // Pass to usePhysics inside FloatingBubble
           onClick={() => handleBubbleClick(bubble.path)}
         />
       ))}
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-white rounded-full opacity-30 animate-ping"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+            }}
+          ></div>
+        ))}
+      </div>
+
+      {/* Instructions */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center z-20">
+        <p className="text-purple-200 text-sm md:text-base animate-bounce">
+          🎯 Click the floating bubbles to explore my projects!
+        </p>
+      </div>
     </div>
   );
 };
