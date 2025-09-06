@@ -55,7 +55,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-export const usePhysics = (initialX: number, initialY: number, speed: number = 0.5) => {
+export const usePhysics = (initialX: number, initialY: number, speed: number = 0.5, resetTrigger: number = 0) => {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const velocityRef = useRef({ 
     vx: (Math.random() - 0.5) * speed, 
@@ -65,8 +65,14 @@ export const usePhysics = (initialX: number, initialY: number, speed: number = 0
   const lastTimeRef = useRef<number>(0);
 
   useEffect(() => {
+    // Reset velocities whenever resetTrigger changes
+    velocityRef.current = { 
+      vx: (Math.random() - 0.5) * speed, 
+      vy: (Math.random() - 0.5) * speed 
+    };
+    lastTimeRef.current = 0;
+
     const animate = (currentTime: number) => {
-      // Throttle to ~60fps
       if (currentTime - lastTimeRef.current < 16) {
         animationRef.current = requestAnimationFrame(animate);
         return;
@@ -77,15 +83,8 @@ export const usePhysics = (initialX: number, initialY: number, speed: number = 0
         let newX = prev.x + velocityRef.current.vx;
         let newY = prev.y + velocityRef.current.vy;
 
-        // Bounce off edges (accounting for bubble size)
-        if (newX <= 5 || newX >= 90) {
-          velocityRef.current.vx *= -1;
-          newX = Math.max(5, Math.min(90, newX));
-        }
-        if (newY <= 5 || newY >= 85) {
-          velocityRef.current.vy *= -1;
-          newY = Math.max(5, Math.min(85, newY));
-        }
+        if (newX <= 5 || newX >= 90) velocityRef.current.vx *= -1;
+        if (newY <= 5 || newY >= 85) velocityRef.current.vy *= -1;
 
         return {
           x: Math.max(5, Math.min(90, newX)),
@@ -96,17 +95,72 @@ export const usePhysics = (initialX: number, initialY: number, speed: number = 0
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Start animation
     animationRef.current = requestAnimationFrame(animate);
 
-    // Cleanup function
     return () => {
-      if (animationRef.current !== null) {
-        cancelAnimationFrame(animationRef.current);
-        animationRef.current = null;
-      }
+      if (animationRef.current !== null) cancelAnimationFrame(animationRef.current);
     };
-  }, [speed]); // Only re-run if speed changes
+  }, [speed, resetTrigger]);
 
   return position;
 };
+
+
+
+// import { useState, useEffect, useRef } from 'react';
+
+// export const usePhysics = (initialX: number, initialY: number, speed: number = 0.5) => {
+//   const [position, setPosition] = useState({ x: initialX, y: initialY });
+//   const velocityRef = useRef({ 
+//     vx: (Math.random() - 0.5) * speed, 
+//     vy: (Math.random() - 0.5) * speed 
+//   });
+//   const animationRef = useRef<number | null>(null);
+//   const lastTimeRef = useRef<number>(0);
+
+//   useEffect(() => {
+//     const animate = (currentTime: number) => {
+//       // Throttle to ~60fps
+//       if (currentTime - lastTimeRef.current < 16) {
+//         animationRef.current = requestAnimationFrame(animate);
+//         return;
+//       }
+//       lastTimeRef.current = currentTime;
+
+//       setPosition(prev => {
+//         let newX = prev.x + velocityRef.current.vx;
+//         let newY = prev.y + velocityRef.current.vy;
+
+//         // Bounce off edges (accounting for bubble size)
+//         if (newX <= 5 || newX >= 90) {
+//           velocityRef.current.vx *= -1;
+//           newX = Math.max(5, Math.min(90, newX));
+//         }
+//         if (newY <= 5 || newY >= 85) {
+//           velocityRef.current.vy *= -1;
+//           newY = Math.max(5, Math.min(85, newY));
+//         }
+
+//         return {
+//           x: Math.max(5, Math.min(90, newX)),
+//           y: Math.max(5, Math.min(85, newY))
+//         };
+//       });
+
+//       animationRef.current = requestAnimationFrame(animate);
+//     };
+
+//     // Start animation
+//     animationRef.current = requestAnimationFrame(animate);
+
+//     // Cleanup function
+//     return () => {
+//       if (animationRef.current !== null) {
+//         cancelAnimationFrame(animationRef.current);
+//         animationRef.current = null;
+//       }
+//     };
+//   }, [speed]); // Only re-run if speed changes
+
+//   return position;
+// };
