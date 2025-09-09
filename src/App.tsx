@@ -12,6 +12,7 @@ import DataVisualizationProject from "./pages/DataVisualizationProject";
 import MobileAppProject from "./pages/MobileAppProject";
 import MachineLearningProject from "./pages/MachineLearningProject";
 import GameDevelopmentProject from "./pages/GameDevelopmentProject";
+import Hackathons from "./pages/Hackathons";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/mobile-app" element={<MobileAppProject />} />
           <Route path="/machine-learning" element={<MachineLearningProject />} />
           <Route path="/game-development" element={<GameDevelopmentProject />} />
+          <Route path="/hackathons" element={<Hackathons />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

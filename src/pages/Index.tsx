@@ -16,6 +16,7 @@ const Index = () => {
     { id: 4, name: 'Mobile App', icon: '📱', path: '/mobile-app', color: '#f9ca24' },
     { id: 5, name: 'ML Model', icon: '🧠', path: '/machine-learning', color: '#6c5ce7' },
     { id: 6, name: 'Game Dev', icon: '🎮', path: '/game-development', color: '#fd79a8' },
+    { id: 7, name: 'Hackathons', icon: '🏅', path: '/hackathons', color: '#aa31daff' },
   ];
 
   useEffect(() => {
