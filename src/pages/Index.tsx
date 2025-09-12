@@ -54,7 +54,7 @@ const Index = () => {
         </h1>
         <div className="text-center mt-2">
           <p className="text-purple-200 text-lg md:text-xl font-medium">
-            ✨ Computer Science Master's Student ✨
+            ✨ Software Engineeer ✨
           </p>
         </div>
       </div>

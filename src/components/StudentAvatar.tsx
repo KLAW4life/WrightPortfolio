@@ -13,15 +13,17 @@ const StudentAvatar = () => {
         {/* Avatar character */}
         <div className="w-full h-full rounded-full bg-gradient-to-br from-purple-300 to-purple-500 flex flex-col items-center justify-center relative overflow-hidden">
           {/* Face */}
-          <div className="text-6xl md:text-8xl animate-bounce">
-            👩‍💻
+          {/* <div className="text-6xl md:text-8xl animate-bounce"> */}
+          <div className="text-6xl md:text-8xl">
+            {/* 👩‍💻 */}
+            <img src="/photo.jpg" alt="Avatar" className="w-full h-full object-cover rounded-full" />
           </div>
           
           {/* Floating elements around avatar */}
-          <div className="absolute top-4 right-4 text-2xl animate-ping">💜</div>
+          {/* <div className="absolute top-4 right-4 text-2xl animate-ping">💜</div>
           <div className="absolute top-8 left-4 text-xl animate-pulse">⭐</div>
           <div className="absolute bottom-4 right-6 text-lg animate-bounce">✨</div>
-          <div className="absolute bottom-8 left-2 text-xl animate-pulse">🚀</div>
+          <div className="absolute bottom-8 left-2 text-xl animate-pulse">🚀</div> */}
         </div>
         
         {/* Orbiting elements */}
