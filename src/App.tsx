@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import AIProject from "./pages/AIProject";
+import ResumeAnalyzer from "./pages/ResumeAnalyzer";
 import WebScraperProject from "./pages/WebScraperProject";
 import DataVisualizationProject from "./pages/DataVisualizationProject";
 import MobileAppProject from "./pages/MobileAppProject";
@@ -24,14 +24,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/ai-chatbot" element={<AIProject />} />
+          <Route path="/resume-analyzer" element={<ResumeAnalyzer />} />
           <Route path="/web-scraper" element={<WebScraperProject />} />
           <Route path="/data-visualization" element={<DataVisualizationProject />} />
           <Route path="/mobile-app" element={<MobileAppProject />} />
           <Route path="/machine-learning" element={<MachineLearningProject />} />
           <Route path="/game-development" element={<GameDevelopmentProject />} />
           <Route path="/hackathons" element={<Hackathons />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
