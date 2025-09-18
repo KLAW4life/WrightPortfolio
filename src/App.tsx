@@ -13,6 +13,8 @@ import MobileAppProject from "./pages/MobileAppProject";
 import MachineLearningProject from "./pages/MachineLearningProject";
 import GameDevelopmentProject from "./pages/GameDevelopmentProject";
 import Hackathons from "./pages/Hackathons";
+import Signifi from "./pages/Signifi";
+
 
 const queryClient = new QueryClient();
 
@@ -25,12 +27,13 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/resume-analyzer" element={<ResumeAnalyzer />} />
-          <Route path="/web-scraper" element={<WebScraperProject />} />
-          <Route path="/data-visualization" element={<DataVisualizationProject />} />
-          <Route path="/mobile-app" element={<MobileAppProject />} />
-          <Route path="/machine-learning" element={<MachineLearningProject />} />
-          <Route path="/game-development" element={<GameDevelopmentProject />} />
+          {/* <Route path="/web-scraper" element={<WebScraperProject />} /> */}
+          {/* <Route path="/data-visualization" element={<DataVisualizationProject />} /> */}
+          {/* <Route path="/mobile-app" element={<MobileAppProject />} /> */}
+          {/* <Route path="/machine-learning" element={<MachineLearningProject />} /> */}
+          {/* <Route path="/game-development" element={<GameDevelopmentProject />} /> */}
           <Route path="/hackathons" element={<Hackathons />} />
+          <Route path="/signifi" element={<Signifi />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

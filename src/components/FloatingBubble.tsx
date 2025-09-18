@@ -6,7 +6,9 @@ interface FloatingBubbleProps {
   project: {
     id: number;
     name: string;
-    icon: string;
+    // icon: string;
+    icon?: string;   // icon is optional
+    img?: string;    // logo image path is optional
     color: string;
     x: number;
     y: number;
@@ -38,7 +40,18 @@ const FloatingBubble: React.FC<FloatingBubbleProps> = ({ project, onClick, reset
           background: `linear-gradient(135deg, ${project.color}dd, ${project.color}aa)`,
         }}
       >
-        <div className="text-2xl md:text-3xl mb-1">{project.icon}</div>
+        {/* <div className="text-2xl md:text-3xl mb-1">{project.icon}</div> */}
+        <div className="mb-1 flex items-center justify-center">
+          {project.img ? (
+            <img
+              src={project.img}
+              alt={project.name}
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+            />
+          ) : (
+            <span className="text-2xl md:text-3xl">{project.icon}</span>
+          )}
+        </div>
         <div className="text-white text-xs md:text-sm font-bold text-center px-1">
           {project.name}
         </div>

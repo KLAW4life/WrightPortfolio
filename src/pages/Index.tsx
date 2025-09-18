@@ -11,12 +11,14 @@ const Index = () => {
 
   const projects = [
     { id: 1, name: 'Resume Analyzer', icon: '🤖', path: '/resume-analyzer', color: '#ff6b6b' },
-    { id: 2, name: 'Web Scraper', icon: '🕷️', path: '/web-scraper', color: '#4ecdc4' },
-    { id: 3, name: 'Data Viz', icon: '📊', path: '/data-visualization', color: '#45b7d1' },
-    { id: 4, name: 'Mobile App', icon: '📱', path: '/mobile-app', color: '#f9ca24' },
-    { id: 5, name: 'ML Model', icon: '🧠', path: '/machine-learning', color: '#6c5ce7' },
-    { id: 6, name: 'Game Dev', icon: '🎮', path: '/game-development', color: '#fd79a8' },
+    // { id: 2, name: 'Web Scraper', icon: '🕷️', path: '/web-scraper', color: '#4ecdc4' },
+    // { id: 3, name: 'Data Viz', icon: '📊', path: '/data-visualization', color: '#45b7d1' },
+    // { id: 4, name: 'Mobile App', icon: '📱', path: '/mobile-app', color: '#f9ca24' },
+    // { id: 5, name: 'ML Model', icon: '🧠', path: '/machine-learning', color: '#6c5ce7' },
+    // { id: 6, name: 'Game Dev', icon: '🎮', path: '/game-development', color: '#fd79a8' },
     { id: 7, name: 'Hackathons', icon: '🏅', path: '/hackathons', color: '#aa31daff' },
+    { id: 8, name: 'Signifi', img: '/public/images/signifi-logo.png', path: '/signifi', color: '#aa31daff' },
+    
   ];
 
   useEffect(() => {
