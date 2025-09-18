@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Github } from 'lucide-react';
 
 const ResumeAnalyzer = () => {
   const navigate = useNavigate();
@@ -54,6 +54,14 @@ const ResumeAnalyzer = () => {
                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                 Certification
               </div>
+              <a
+                href="https://github.com/osmanybg/resume-analyzer"
+                target="_blank"
+                rel="noreferrer"
+                className=" mt-9 text-purple-300 hover:text-white transition-colors"
+              >
+                <Github size={24} />
+              </a>
             </div>
           </div>
 
