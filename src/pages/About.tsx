@@ -156,12 +156,12 @@ export default function About() {
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-10 border border-purple-300/20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex items-center gap-5">
-              <div className="shrink-0 w-28 h-28">
+              {/* <div className="shrink-0 w-28 h-28">
                 <StudentAvatar />
 
-              </div>
+              </div> */}
               
-              {/* <StudentAvatar /> */}
+              <StudentAvatar />
               {/* <div>
                 <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
                   Kerene Wright
@@ -188,7 +188,7 @@ export default function About() {
                   Kerene Wright
                 </h1>
                 <p className="text-purple-200">
-                  Software Engineer • AI/ML • Product Prototyper
+                  Software Engineer • AI/ML
                 </p>
                 <div className="flex items-center gap-2 mt-1 text-purple-300">
                   <MapPin size={16} />
@@ -196,33 +196,33 @@ export default function About() {
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <Badge>Full-Stack</Badge>
-                  <Badge color="bg-amber-500/80">Hackathons</Badge>
+                  <Badge color="bg-amber-500/80">Software Development</Badge>
                   <Badge color="bg-emerald-600/80">AI/ML</Badge>
                 </div>
               </div>
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="mailto:you@email.com"
+                href="mailto:wright.kerenel@gmail.com"
                 className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 text-white px-4 py-2 border border-purple-300/20"
               >
                 <Mail size={18} /> Email
               </a>
               <a
-                href="https://www.linkedin.com/in/your-handle"
+                href="https://www.linkedin.com/in/kerene-wright-985581182/"
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 text-white px-4 py-2 border border-purple-300/20"
               >
                 <Linkedin size={18} /> LinkedIn
               </a>
               <a
-                href="https://github.com/YourUsername"
+                href="https://github.com/KLAW4life"
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 text-white px-4 py-2 border border-purple-300/20"
               >
                 <Github size={18} /> GitHub
               </a>
               <a
-                href="/files/Resume.pdf" // put your file in /public/files/Resume.pdf
+                href="/public/files/Resume.pdf" // put your file in /public/files/Resume.pdf
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-teal-600/80 hover:bg-teal-600 text-white px-4 py-2"
               >
@@ -241,17 +241,30 @@ export default function About() {
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
                   <h3 className="text-white font-semibold">Florida International University</h3>
-                  <span className="text-purple-300 text-sm">2022 – 2026</span>
+                  <span className="text-purple-300 text-sm">2024 – Present</span>
                 </div>
                 <p className="text-purple-200 text-sm">
-                  B.S. in Computer Science (Honors) • Minor in Data Science
+                  Masters of Science (MS) in Computer Science
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  <Pill>GPA: 3.9+</Pill>
-                  <Pill color="bg-emerald-500/20">Dean’s List</Pill>
-                  <Pill color="bg-blue-500/20">Honors College</Pill>
+                  <Pill>GPA: 3.8+</Pill>
                 </div>
               </div>
+
+              <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white font-semibold">The University of the West Indies, Mona Campus</h3>
+                  <span className="text-purple-300 text-sm">2020 – 2023</span>
+                </div>
+                <p className="text-purple-200 text-sm">
+                  B.S. in Computer Science (Honors)
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <Pill>GPA: 3.8</Pill>
+                  <Pill color="bg-emerald-500/20">Dean’s List</Pill>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -261,37 +274,29 @@ export default function About() {
             <div className="space-y-4">
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold">QBIC Club</h3>
-                  <span className="text-purple-300 text-sm">President</span>
+                  <h3 className="text-white font-semibold">INIT</h3>
+                  <span className="text-purple-300 text-sm">Build Program Manager</span>
                 </div>
                 <p className="text-purple-200 text-sm">
-                  Organized workshops, mentorship, and research meetups; grew membership and ran events with partners.
+                  Leading a large-scale student development initiative, coordinating the formation of 12+ high-impact project teams through strategic planning and resource management.
                 </p>
               </div>
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold">Green Campus Initiative</h3>
-                  <span className="text-purple-300 text-sm">Vice President</span>
+                  <h3 className="text-white font-semibold">WiCS</h3>
+                  <span className="text-purple-300 text-sm">Member</span>
                 </div>
                 <p className="text-purple-200 text-sm">
-                  Led sustainability projects and hackathon collaborations (e.g., GreenifyMe micro-climate tool).
+                  Active member of the Women in Computer Science (WiCS) club, promoting gender diversity in tech.
                 </p>
               </div>
-              <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold">HEAL (Healthcare Education for Access & Language)</h3>
-                  <span className="text-purple-300 text-sm">Founder</span>
-                </div>
-                <p className="text-purple-2 00 text-sm">
-                  Building medical language workshops and outreach to improve patient–provider communication.
-                </p>
-              </div>
+            
             </div>
           </div>
         </div>
 
         {/* Projects / Highlights */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-purple-300/20">
+        {/* <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-purple-300/20">
           <h2 className="text-2xl font-bold text-white mb-4">Highlights</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
@@ -316,10 +321,10 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact / Footer card */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-purple-300/20">
+        {/* <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 md:p-8 border border-purple-300/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <h2 className="text-2xl font-bold text-white mb-1">Let’s connect</h2>
@@ -355,7 +360,8 @@ export default function About() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
     </div>
   );
