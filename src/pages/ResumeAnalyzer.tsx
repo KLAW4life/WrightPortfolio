@@ -121,7 +121,7 @@ const ResumeAnalyzer = () => {
               controls
               preload="metadata"
             >
-              <source src="/public/videos/resumer-analyzer-demo.mp4" type="video/mp4" />
+              <source src="/videos/resume-analyzer-demo.mp4" type="video/mp4" />
               {/* Optional: a WebM for smaller size */}
               {/* <source src="/videos/resume-demo.webm" type="video/webm" /> */}
             </video>
