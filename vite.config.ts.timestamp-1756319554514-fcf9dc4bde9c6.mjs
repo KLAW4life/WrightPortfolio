@@ -1,9 +1,9 @@
 // vite.config.ts
-import { defineConfig } from "file:///C:/Users/keren/OneDrive/Documents/Github/WrightPortfolio/node_modules/vite/dist/node/index.js";
-import react from "file:///C:/Users/keren/OneDrive/Documents/Github/WrightPortfolio/node_modules/@vitejs/plugin-react-swc/index.mjs";
+import { defineConfig } from "file:///C:/Users/keren/Github/WrightPortfolio/node_modules/vite/dist/node/index.js";
+import react from "file:///C:/Users/keren/Github/WrightPortfolio/node_modules/@vitejs/plugin-react-swc/index.mjs";
 import path from "path";
-import { componentTagger } from "file:///C:/Users/keren/OneDrive/Documents/Github/WrightPortfolio/node_modules/lovable-tagger/dist/index.js";
-var __vite_injected_original_dirname = "C:\\Users\\keren\\OneDrive\\Documents\\Github\\WrightPortfolio";
+import { componentTagger } from "file:///C:/Users/keren/Github/WrightPortfolio/node_modules/lovable-tagger/dist/index.js";
+var __vite_injected_original_dirname = "C:\\Users\\keren\\Github\\WrightPortfolio";
 var vite_config_default = defineConfig(({ mode }) => ({
   server: {
     host: "::",
