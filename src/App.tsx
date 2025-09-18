@@ -14,6 +14,7 @@ import MachineLearningProject from "./pages/MachineLearningProject";
 import GameDevelopmentProject from "./pages/GameDevelopmentProject";
 import Hackathons from "./pages/Hackathons";
 import Signifi from "./pages/Signifi";
+import About from "./pages/About";
 
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           {/* <Route path="/game-development" element={<GameDevelopmentProject />} /> */}
           <Route path="/hackathons" element={<Hackathons />} />
           <Route path="/signifi" element={<Signifi />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

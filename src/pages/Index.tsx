@@ -63,7 +63,12 @@ const Index = () => {
 
       {/* Central avatar */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+      <button
+        onClick={() => navigate('/about')}
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer bg-transparent border-none"
+      >
         <StudentAvatar />
+      </button>
       </div>
 
       {/* Floating project bubbles */}
@@ -94,7 +99,7 @@ const Index = () => {
       {/* Instructions */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center z-20">
         <p className="text-purple-200 text-sm md:text-base animate-bounce">
-          🎯 Click the floating bubbles to explore my projects!
+          🎯 Click a bubble to explore!
         </p>
       </div>
     </div>
