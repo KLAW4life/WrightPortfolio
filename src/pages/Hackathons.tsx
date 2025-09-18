@@ -65,7 +65,7 @@ const hackathons = [
     links: {
       devpost: "https://devpost.com/software/meta-museum-ohpn3r",
       github: "https://github.com/nataliesoul/MetaMuseum",
-      demo: "horizon.meta.com",
+      demo: "https://horizon.meta.com/world/10162550942943464/",
     },
   },
   {
