@@ -21,7 +21,6 @@ const Signifi = () => {
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-4xl md:text-5xl flex justify-center gap-3">
             <span>🧤</span>
-            {/* <img src="/public/images/signifi-logo.png" alt="Signifi Logo" className="w-10 h-10"/> */}
             <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
               SIGNIFI
             </span>

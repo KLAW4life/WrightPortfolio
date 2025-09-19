@@ -10,8 +10,11 @@ const Badge = ({ children, color = "bg-teal-500/80" }) => (
   </span>
 );
 
-const Pill = ({ children, color = "bg-purple-500/20" }) => (
-  <span className={`inline-flex items-center gap-2 ${color} text-purple-50 px-3 py-1.5 rounded-xl border border-purple-300/20`}>
+const Pill = ({ children, color = "bg-purple-500/20", style }: { children: React.ReactNode; color?: string; style?: React.CSSProperties }) => (
+  <span
+    className={`inline-flex items-center gap-2 ${color} text-purple-50 px-3 py-1.5 rounded-xl border border-purple-300/20`}
+    style={style}
+  >
     {children}
   </span>
 );
@@ -101,7 +104,7 @@ export default function About() {
                 <Github size={18} /> GitHub
               </a>
               <a
-                href="files/Resume.pdf" 
+                href="files/Resume(Public).pdf" 
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-teal-600/80 hover:bg-teal-600 text-white px-4 py-2"
               >
@@ -153,7 +156,16 @@ export default function About() {
             <div className="space-y-4">
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold">INIT</h3>
+                  <a
+                    href="https://www.weareinit.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="no-underline"
+                  >
+                    <Pill style={{ backgroundColor: "#FFDE21", color: "#000", cursor: "pointer" }}>
+                      INIT
+                    </Pill>
+                  </a>
                   <span className="text-purple-300 text-sm">Build Program Manager</span>
                 </div>
                 <p className="text-purple-200 text-sm">
@@ -162,7 +174,17 @@ export default function About() {
               </div>
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white font-semibold">WiCS</h3>
+                  {/* <h3 className="text-white font-semibold">WiCS</h3> */}
+                  <a
+                    href="https://wicsfiu.github.io/witcon-2025/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="no-underline"
+                  >
+                    <Pill style={{ backgroundColor: "#b81fe6ff", color: "#000", cursor: "pointer" }}>
+                      WiCS
+                    </Pill>
+                  </a>
                   <span className="text-purple-300 text-sm">Member</span>
                 </div>
                 <p className="text-purple-200 text-sm">
