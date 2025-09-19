@@ -42,8 +42,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // base: '/' //working build version but not for github pages
-  base: '/WrightPortfolio/' 
+  base: '/' //working build version but not for github pages
+  // base: '/WrightPortfolio/' 
 }));
 
 
