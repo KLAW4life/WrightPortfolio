@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/' //working build version but not for github pages
-  // base: '/WrightPortfolio/' 
+  // base: '/WrightPortfolio/'  
 }));
 
 
