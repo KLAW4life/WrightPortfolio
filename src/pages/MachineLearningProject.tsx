@@ -13,7 +13,7 @@ const MachineLearningProject = () => {
         className="flex items-center gap-2 text-purple-200 hover:text-white transition-colors mb-8"
       >
         <ArrowLeft size={20} />
-        Back to Kerene's World
+        Back to the Wright Portfolio
       </button>
 
       <div className="max-w-4xl mx-auto">

@@ -267,7 +267,7 @@ export default function Hackathons() {
         className="flex items-center gap-2 text-purple-200 hover:text-white transition-colors mb-6 md:mb-8"
       >
         <ArrowLeft size={20} />
-        Back to Kerene's World
+        Back to the Wright Portfolio
       </button>
 
       {/* Page Title */}
