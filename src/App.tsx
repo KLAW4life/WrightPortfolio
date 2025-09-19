@@ -15,6 +15,7 @@ import GameDevelopmentProject from "./pages/GameDevelopmentProject";
 import Hackathons from "./pages/Hackathons";
 import Signifi from "./pages/Signifi";
 import About from "./pages/About";
+import Cattrax from "./pages/Cattrax";
 
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/hackathons" element={<Hackathons />} />
           <Route path="/signifi" element={<Signifi />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cattrax" element={<Cattrax />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

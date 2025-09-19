@@ -18,6 +18,7 @@ const Index = () => {
     // { id: 6, name: 'Game Dev', icon: '🎮', path: '/game-development', color: '#fd79a8' },
     { id: 7, name: 'Hackathons', icon: '🏅', path: '/hackathons', color: '#aa31daff' },
     { id: 8, name: 'Signifi', img: 'images/signifi-logo.png', path: '/signifi', color: '#aa31daff' },
+    { id: 9, name: 'Cattrax', icon: '🚂', path: '/cattrax', color: '#aa31daff' },
     
   ];
 
