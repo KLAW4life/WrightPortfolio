@@ -101,7 +101,7 @@ export default function About() {
                 <Github size={18} /> GitHub
               </a>
               <a
-                href="/files/Resume.pdf" // put your file in /public/files/Resume.pdf
+                href="files/Resume.pdf" 
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-teal-600/80 hover:bg-teal-600 text-white px-4 py-2"
               >

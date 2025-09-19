@@ -17,7 +17,7 @@ const Index = () => {
     // { id: 5, name: 'ML Model', icon: '🧠', path: '/machine-learning', color: '#6c5ce7' },
     // { id: 6, name: 'Game Dev', icon: '🎮', path: '/game-development', color: '#fd79a8' },
     { id: 7, name: 'Hackathons', icon: '🏅', path: '/hackathons', color: '#aa31daff' },
-    { id: 8, name: 'Signifi', img: '/images/signifi-logo.png', path: '/signifi', color: '#aa31daff' },
+    { id: 8, name: 'Signifi', img: 'images/signifi-logo.png', path: '/signifi', color: '#aa31daff' },
     
   ];
 

@@ -107,7 +107,7 @@ const Signifi = () => {
               controls
               preload="metadata"
             >
-              <source src="/videos/signifi-demo.mp4" type="video/mp4" />
+              <source src="videos/signifi-demo.mp4" type="video/mp4" />
             </video>
           </div>
 
