@@ -20,6 +20,7 @@ const Index = () => {
     { id: 8, name: 'Signifi', img: 'images/signifi-logo.png', path: '/signifi', color: '#36866aff' },
     { id: 9, name: 'Cattrax', icon: '🚂', path: '/cattrax', color: '#e87509ff' },
     { id: 10, name: 'Work Exp', icon: '💼', path: '/work-experience', color: '#12c3efff' },
+    { id: 11, name: 'Pluto', icon: '🌑', path: '/pluto', color: '#52088eff' },
     
   ];
 
@@ -101,7 +102,7 @@ const Index = () => {
       {/* Instructions */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center z-20">
         <p className="text-purple-200 text-sm md:text-base animate-bounce">
-          🎯 Click a bubble to explore!
+          🎯 Click a bubble to explore! Click Me to Know Me!
         </p>
       </div>
     </div>

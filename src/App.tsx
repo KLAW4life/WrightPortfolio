@@ -17,6 +17,7 @@ import Signifi from "./pages/Signifi";
 import About from "./pages/About";
 import Cattrax from "./pages/Cattrax";
 import WorkExperience from "./pages/WorkExperience";
+import Pluto from "./pages/Pluto";
 
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/cattrax" element={<Cattrax />} />
           <Route path="/work-experience" element={<WorkExperience />} />
+          <Route path="/pluto" element={<Pluto />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

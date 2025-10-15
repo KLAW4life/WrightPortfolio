@@ -190,7 +190,7 @@ const HackathonCard = ({ h }) => {
           )}
 
           {h.impact?.length > 0 && (
-            <Section title="Impact">
+            <Section title="Highlights">
               <div className="space-y-4">
                 {h.impact.map((m, j) => (
                   <div key={j} className="flex justify-between items-center">

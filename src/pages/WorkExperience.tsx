@@ -21,7 +21,7 @@ const experience = [
       "On the NGAGE platform, I boosted user engagement by 20% by building interactive trivia and survey minigames using SCRUM practices. I also improved stability by systematically testing, debugging, and documenting fixes, delivering a smoother, more reliable experience for 100+ active users.",
     stack: [
       { icon: "", text: "Vue.js3 + Vuetify", color: "bg-blue-500" },
-      { icon: "", text: "TypeScript,", color: "bg-green-500" },
+      { icon: "", text: "TypeScript", color: "bg-green-500" },
       { icon: "", text: "Firebase", color: "bg-purple-500" },
       { icon: "", text: "BitBucket", color: "bg-orange-500" },
     ],
@@ -44,7 +44,7 @@ const experience = [
       "I contributed TypeScript-based VR interaction features and implemented UI systems while gaining hands-on experience in 3D UI/UX and agile workflows within a SCRUM team. I collaborated in weekly stand-ups, participated in peer code reviews, and worked across the full software development life cycle under mentorship from senior developers. I also developed AI-driven NPCs with interactive voice systems, enabling natural player conversations and boosting immersion in the XR application by leveraging emerging conversational and speech technologies.",
     stack: [
       { icon: "", text: "Meta Horizon World Platform", color: "bg-blue-500" },
-      { icon: "", text: "TypeScript,", color: "bg-green-500" },
+      { icon: "", text: "TypeScript", color: "bg-green-500" },
       { icon: "", text: "Blender", color: "bg-purple-500" },
     ],
     impact: [
