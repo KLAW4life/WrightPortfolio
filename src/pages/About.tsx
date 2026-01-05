@@ -123,7 +123,7 @@ export default function About() {
               <div className="rounded-2xl p-4 bg-purple-500/10 border border-purple-300/20">
                 <div className="flex items-center justify-between">
                   <h3 className="text-white font-semibold">Florida International University</h3>
-                  <span className="text-purple-300 text-sm">2024 – Present</span>
+                  <span className="text-purple-300 text-sm">2024 – 2025</span>
                 </div>
                 <p className="text-purple-200 text-sm">
                   Masters of Science (MS) in Computer Science

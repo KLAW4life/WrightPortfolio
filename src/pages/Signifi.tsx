@@ -54,14 +54,16 @@ const Signifi = () => {
                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                 Recognized gesture is displayed on an LCD screen or mobile app.
               </div>
-              <a
-                href="https://github.com/INIT-FIU-Hardware-Build-Spring2024/ASL-Glove/tree/main"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-9 text-purple-300 hover:text-white transition-colors"
-              >
-                <Github size={24} />
-              </a>
+              <div className="space-y-2">                          
+                <a
+                  href="https://github.com/INIT-FIU-Hardware-Build-Spring2024/ASL-Glove/tree/main"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-9 text-purple-300 hover:text-white transition-colors"
+                >
+                  <Github size={24} />
+                </a>
+              </div>
             </div>
           </div>
 

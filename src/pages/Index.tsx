@@ -20,8 +20,8 @@ const Index = () => {
     { id: 8, name: 'Signifi', img: 'images/signifi-logo.png', path: '/signifi', color: '#36866aff' },
     { id: 9, name: 'Cattrax', icon: '🚂', path: '/cattrax', color: '#e87509ff' },
     { id: 10, name: 'Work Exp', icon: '💼', path: '/work-experience', color: '#12c3efff' },
-    { id: 11, name: 'Pluto', icon: '🌑', path: '/pluto', color: '#eb1792ff' },
-    
+    { id: 11, name: 'Pluto', icon: '🌑', path: '/pluto', color: '#eb1792ff' }, 
+    { id: 11, name: 'Neuroplay', icon: '🧠', path: '/neuroplay', color: '#b6b97eff' }, 
   ];
 
   useEffect(() => {

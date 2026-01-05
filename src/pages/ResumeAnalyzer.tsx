@@ -54,14 +54,16 @@ const ResumeAnalyzer = () => {
                 <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                 Certification
               </div>
-              <a
-                href="https://github.com/osmanybg/resume-analyzer"
-                target="_blank"
-                rel="noreferrer"
-                className=" mt-9 text-purple-300 hover:text-white transition-colors"
-              >
-                <Github size={24} />
-              </a>
+              <div className="space-y-2">
+                <a
+                  href="https://github.com/osmanybg/resume-analyzer"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=" mt-9 text-purple-300 hover:text-white transition-colors"
+                >
+                  <Github size={24} />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -110,20 +112,12 @@ const ResumeAnalyzer = () => {
           <h2 className="text-2xl font-bold text-white mb-4">🎬 Demo Video</h2>
 
           <div className="rounded-2xl overflow-hidden border border-purple-300/20">
-            {/* <video
-              className="w-full aspect-video"   // if you don't have aspect-video, see note below
-              controls
-              preload="metadata"
-              poster="/images/resume-thumb.jpg" // optional thumbnail in /public/images
-            > */}
             <video
               className="w-full aspect-video" 
               controls
               preload="metadata"
             >
               <source src="videos/resume-analyzer-demo.mp4" type="video/mp4" />
-              {/* Optional: a WebM for smaller size */}
-              {/* <source src="/videos/resume-demo.webm" type="video/webm" /> */}
             </video>
           </div>
 

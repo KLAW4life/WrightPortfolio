@@ -18,6 +18,7 @@ import About from "./pages/About";
 import Cattrax from "./pages/Cattrax";
 import WorkExperience from "./pages/WorkExperience";
 import Pluto from "./pages/Pluto";
+import Neuroplay from "./pages/Neuroplay"
 
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/cattrax" element={<Cattrax />} />
           <Route path="/work-experience" element={<WorkExperience />} />
           <Route path="/pluto" element={<Pluto />} />
+          <Route path="/neuroplay" element={<Neuroplay />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
