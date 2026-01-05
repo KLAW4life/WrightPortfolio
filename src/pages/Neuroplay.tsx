@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Github } from 'lucide-react';
 
-const Signifi = () => {
+const NeuroPlay = () => {
   const navigate = useNavigate();
 
   return (
@@ -127,4 +127,4 @@ const Signifi = () => {
   );
 };
 
-export default Signifi;
+export default NeuroPlay;

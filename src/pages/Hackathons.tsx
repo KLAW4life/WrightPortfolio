@@ -10,6 +10,52 @@ const DEFAULT_IMG =
  * 1) DATA — add/edit hackathons here
  */
 const hackathons = [
+    {
+    id: "morganizer",
+    title: "Morganizer",
+    event: "Knight Hacks VIII",
+    date: "Oct 24–26, 2025",
+    role: "Team Leader / Backend + AI/ML Development",
+    location: "Orlando, FL",
+    cover: DEFAULT_IMG,
+    summary: "The Morganizer acts as an AI Orchestrator for legal operations. It processes incoming messages, detects actionable tasks (like scheduling appointments, drafting responses, or organizing evidence), and routes them to specialized AI agents.",
+    stack: [
+      { icon: "", text: "Python + Flask", color: "bg-yellow-500" },
+      { icon: "", text: "React + Tailwind", color: "bg-blue-500" },
+      { icon: "", text: "Google’s Agent-to-Agent (A2A)", color: "bg-red-500" },
+      { icon: "", text: "Google Gemini API", color: "bg-green-500" },
+    ],
+    impact: [
+      { label: "Hackathon", value: "1st time Participant" },
+    ],
+    links: {
+      devpost: "https://devpost.com/software/morganizer",
+      github: "https://github.com/LukaVarazi/KnightHacks-2025",
+    },
+  },
+  {
+    id: "pluto",
+    title: "Pluto",
+    event: "PlutoHacks",
+    date: "Oct 10 – 11, 2025",
+    role: "Team Leader / Backend + AI/ML Development",
+    location: "Miami, FL",
+    cover: DEFAULT_IMG,
+    summary: "Pluto is an AI-powered memory companion designed to support individuals experiencing memory loss, such as those with Alzheimer’s disease. It allows families and caregivers to upload photos, memories, and personal stories, which are used to build a personalized Memory Profile.",
+    stack: [
+      { icon: "", text: "Python + Flask", color: "bg-yellow-500" },
+      { icon: "", text: "MongoDB ", color: "bg-blue-500" },
+      { icon: "", text: "React.js", color: "bg-red-500" },
+      { icon: "", text: "PyTorch + scikit-learn + BERT", color: "bg-green-500" },
+    ],
+    impact: [
+      { label: "Hackathon", value: "1st time Participant" },
+    ],
+    links: {
+      devpost: "https://devpost.com/software/pluto-3opg6c",
+      github: "https://github.com/PaolaArraut/PlutoHacks2025",
+    },
+  },
   {
     id: "lstm-genai",
     title: "GreenifyMe",
@@ -296,20 +342,20 @@ export default function Hackathons() {
           </div>
 
           {/* Controls */}
-          {/* <button
+          <button
             onClick={prev}
             aria-label="Previous"
-            className="hidden md:flex absolute top-1/2 left-3 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
+            className="hidden md:flex absolute top-1/2 left-1 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
           >
             <ArrowLeftCircle size={36} />
           </button>
           <button
             onClick={next}
             aria-label="Next"
-            className="hidden md:flex absolute top-1/2 right-3 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
+            className="hidden md:flex absolute top-1/2 right-1 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
           >
             <ArrowRightCircle size={36} />
-          </button> */}
+          </button>
 
           {/* Dots */}
           <div className="flex justify-center mt-4 space-x-2">

@@ -246,6 +246,20 @@ export default function Hackathons() {
           </div>
 
           {/* Controls */}
+          <button
+            onClick={prev}
+            aria-label="Previous"
+            className="hidden md:flex absolute top-1/2 left-1 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
+          >
+            <ArrowLeftCircle size={36} />
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next"
+            className="hidden md:flex absolute top-1/2 right-1 -translate-y-1/2 bg-purple-900/50 hover:bg-purple-900/70 border border-purple-300/20 text-white p-1.5 rounded-full"
+          >
+            <ArrowRightCircle size={36} />
+          </button>
           {/* Dots */}
           <div className="flex justify-center mt-4 space-x-2">
             {experience.map((_, i) => (

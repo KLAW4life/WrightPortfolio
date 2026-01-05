@@ -26,7 +26,7 @@ const Pluto = () => {
             </span>
           </h1>
           <p className="text-purple-200 text-lg md:text-xl">
-            "Forgetting is human. Remembering is Pluto.""
+            "Forgetting is human. Remembering is Pluto."
           </p>
         </div>
 

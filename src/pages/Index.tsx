@@ -21,7 +21,8 @@ const Index = () => {
     { id: 9, name: 'Cattrax', icon: '🚂', path: '/cattrax', color: '#e87509ff' },
     { id: 10, name: 'Work Exp', icon: '💼', path: '/work-experience', color: '#12c3efff' },
     { id: 11, name: 'Pluto', icon: '🌑', path: '/pluto', color: '#eb1792ff' }, 
-    { id: 11, name: 'Neuroplay', icon: '🧠', path: '/neuroplay', color: '#b6b97eff' }, 
+    { id: 12, name: 'Neuroplay', icon: '🧠', path: '/neuroplay', color: '#b6b97eff' }, 
+    { id: 13, name: 'Morganizer', img: 'images/morganizer.png', path: '/morganizer', color: '#000000ff' }, 
   ];
 
   useEffect(() => {
