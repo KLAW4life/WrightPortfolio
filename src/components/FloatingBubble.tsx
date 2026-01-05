@@ -23,8 +23,7 @@ const FloatingBubble: React.FC<FloatingBubbleProps> = ({ project, onClick, reset
 
   return (
     <div
-      // className="absolute cursor-pointer transform hover:scale-125 transition-all duration-300 z-10"
-      className="absolute cursor-pointer text-2xl md:text-3xl"
+      className="absolute cursor-pointer text-2xl md:text-3xl z-30"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,
