@@ -11,6 +11,7 @@ const Index = () => {
 
   const projects = [
     { id: 1, name: 'Resume Analyzer', icon: '🤖', path: '/resume-analyzer', color: '#ff6b6b' },
+    { id: 2, name: 'BuildLLM', icon: '🤖', path: '/buildLLM', color: '#cfde2cff' }, 
     // { id: 2, name: 'Web Scraper', icon: '🕷️', path: '/web-scraper', color: '#4ecdc4' },
     // { id: 3, name: 'Data Viz', icon: '📊', path: '/data-visualization', color: '#45b7d1' },
     // { id: 4, name: 'Mobile App', icon: '📱', path: '/mobile-app', color: '#f9ca24' },

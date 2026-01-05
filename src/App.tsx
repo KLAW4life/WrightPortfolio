@@ -20,6 +20,7 @@ import WorkExperience from "./pages/WorkExperience";
 import Pluto from "./pages/Pluto";
 import Neuroplay from "./pages/Neuroplay"
 import Morganizer from "./pages/Morganizer"
+import INITBuildLLM from "./pages/INITBuildLLM"
 
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/pluto" element={<Pluto />} />
           <Route path="/neuroplay" element={<Neuroplay />} />
           <Route path="/morganizer" element={<Morganizer />} />
+          <Route path="/buildLLM" element={<INITBuildLLM />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
